@@ -1,0 +1,9 @@
+config:
+  target: "ws://localhost:8080"  # WebSocket server address
+scenarios:
+  - flow:
+      - post:
+          url: "/message"
+          json:
+            message: "Test message"
+      - think: 1  # Delay between actions in seconds
